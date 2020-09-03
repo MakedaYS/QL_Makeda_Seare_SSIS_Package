@@ -26,13 +26,11 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-B5MT3KV</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcAxU6QiFmEyORzpEGJ4rQwAAAAACAAAAAAAQZgAAAAEAACAAAABhoUaljhRjVurJOfepW9+FmUhqNKVdQ6IKUaz34AFYbQAAAAAOgAAAAAIAACAAAABnBrPCGFY+JBWaRsMvYnhv1yAEc6wGOK49fglrg5UUpZAAAAAwBM7OzPXxWNGFArODtSP/pwGLF9QQgV25ZHXdAmPhNfpL6ZZBmRSwh3llHdQVcgG2W3AGcunw4k0uwysoqr/VmGF8hGnUXGJ34PA3R8RkCGShJ0idlduVvJStXVhiPZzyx5Pn25O/LscefWsmTM1wnGYiiok91DEwFj1Cdq981xC91tRn94eDwjqQFDgPBb1AAAAA22P8n0XvNic8wPJ4GGb34qSvyXwqk+drQjgK6qx6PsmH8NVP1I4aOqm+75EugEtuGRnqjxfXhgSC4RdvXlqWlA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcAxU6QiFmEyORzpEGJ4rQwAAAAACAAAAAAAQZgAAAAEAACAAAAA1PVEOyZQSlryM0qm2ZROhy/7O6KOAz7cXCERPJIzAowAAAAAOgAAAAAIAACAAAAB2LoDlThkJhRBN0eag5a/bTM6sBxpougeC5QQc198AU5AAAAB2tRwExnim3qUdPliEOEgoXRG0LdFOD0cPjPtpR+q+OPcz4BW/ZqvYLYxmXaxrklfWkhqdH3Mj4tsjvcD21Yaw1DWOngLIsFGCzM/ze+WCHZD3Ufgh1o9Z6fIiMtq8pXZpgHEbKO6PhgfYNQo6JtRv51dGYZkBI3SirWpByVHNcZJHG7ERVoIgCCh7Ys81b1NAAAAAG/Bj9mvz9ihwpxnvCbPmmhgCC/XR+Z/smeq1dtGaq6yCmaWfrniJP5X8lJsm+4QRCskOj10gVnMVabgGH0gH3w==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Package.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Pkg_Makeda_Seare_LendingQB.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Package1.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="OData Source_LendingQB.conmgr" />
@@ -353,33 +351,16 @@
             </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Package.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{E4FFC552-DD92-4C91-B1DF-1260F5713297}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{D55B5D66-0133-41E6-8AF3-6B814D816B7C}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="Pkg_Makeda_Seare_LendingQB.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{35FA411F-925E-4778-8394-EFD0D16FA91F}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">Pkg_Makeda_Seare_LendingQB</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">42</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">67</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{7034684C-75A4-4972-8285-C4FFFB4C11C7}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{25EE3726-D930-4C4E-86F4-CBFFEBE175BB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -505,23 +486,6 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Package1.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{658A8167-BE17-4BE3-993B-CC204DE7CDAB}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{DD1311B8-D19D-4655-84AA-4E1CFB808F97}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
