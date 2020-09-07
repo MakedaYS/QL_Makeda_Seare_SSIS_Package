@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-B5MT3KV</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcAxU6QiFmEyORzpEGJ4rQwAAAAACAAAAAAAQZgAAAAEAACAAAAA1PVEOyZQSlryM0qm2ZROhy/7O6KOAz7cXCERPJIzAowAAAAAOgAAAAAIAACAAAAB2LoDlThkJhRBN0eag5a/bTM6sBxpougeC5QQc198AU5AAAAB2tRwExnim3qUdPliEOEgoXRG0LdFOD0cPjPtpR+q+OPcz4BW/ZqvYLYxmXaxrklfWkhqdH3Mj4tsjvcD21Yaw1DWOngLIsFGCzM/ze+WCHZD3Ufgh1o9Z6fIiMtq8pXZpgHEbKO6PhgfYNQo6JtRv51dGYZkBI3SirWpByVHNcZJHG7ERVoIgCCh7Ys81b1NAAAAAG/Bj9mvz9ihwpxnvCbPmmhgCC/XR+Z/smeq1dtGaq6yCmaWfrniJP5X8lJsm+4QRCskOj10gVnMVabgGH0gH3w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAcAxU6QiFmEyORzpEGJ4rQwAAAAACAAAAAAAQZgAAAAEAACAAAABYhw47UQs+lIPah6qMlBQ0lqKfRu6ZbMZZcEEerGi4JgAAAAAOgAAAAAIAACAAAACHBho9wAiYrPCD0cgDR4Gip7XrNESQ4m6ob1TCQwGqipAAAADfaNoLHZJuIBmF2BZfWVYOB2GHrPpVqfmncIA43u56yMbU9k8+zufiVuQ7Cah4XOfCeYHZdjVN8xA2zU8kpQex1YihncYc9imoabzaBYak7K6Dy2L0CkMnMqFw+UIpm6JXHMWCcmffeqInmzs9Xs6wk5ohopdSXYSBnGgu2jZmPV+WTYzoXzEri2Sos4wUuUFAAAAAgzTvwZjLuEcfqusA59d7wBSxJJlYEuc351hVX14af5XXqbKY2QIZce2pm2mkVAiKy7c4ykdGed1rHNiRyjTpEg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -126,21 +126,6 @@
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.DESKTOP-B5MT3KV.QLSSISLOG.ConnectionString">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=DESKTOP-B5MT3KV;Initial Catalog=QLSSISLOG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
             <SSIS:Parameter SSIS:Name="CM.DESKTOP-B5MT3KV.QLSSISLOG.ConnectUsingManagedIdentity">
@@ -246,21 +231,6 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.DESKTOP-B5MT3KV.STGQL.ConnectionString">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=DESKTOP-B5MT3KV;Initial Catalog=STGQL;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
             <SSIS:Parameter SSIS:Name="CM.DESKTOP-B5MT3KV.STGQL.ConnectUsingManagedIdentity">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
@@ -357,10 +327,10 @@
                 <SSIS:Property SSIS:Name="Name">Pkg_Makeda_Seare_LendingQB</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">67</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">103</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{25EE3726-D930-4C4E-86F4-CBFFEBE175BB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{81376E09-10BA-4D2B-899C-08FC23A494BA}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

@@ -63,4 +63,25 @@
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
   </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="DESKTOPB5MT3KVQLSSISLOG_ConnectionString">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{69025c68-b8ac-4966-9a87-95e74c3e1f58}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">Data Source=DESKTOP-B5MT3KV;Initial Catalog=QLSSISLOG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
 </SSIS:Parameters>
