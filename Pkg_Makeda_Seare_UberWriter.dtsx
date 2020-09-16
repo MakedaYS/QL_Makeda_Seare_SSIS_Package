@@ -1,0 +1,2114 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/15/2020 6:55:06 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-B5MT3KV"
+  DTS:CreatorName="DESKTOP-B5MT3KV\HP"
+  DTS:DTSID="{C98C9269-8AAF-4F5A-951B-DC664535A7A9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{713FCC47-E148-4EBF-B71C-3F319FF48A06}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{06E7830D-49CF-4D6A-BA93-FEE140D9FCF9}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varBody">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CA54D9D6-D7A2-42C6-B12A-7BAD182E9ED0}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;delete from [dbo].[Stg_Makeda_Seare_QL] where SourceName = 'UberWriter'&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varDeleteSTG">
+      <DTS:VariableValue
+        DTS:DataType="8">delete from [dbo].[Stg_Makeda_Seare_QL] where SourceName = 'UberWriter'</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CE006789-DCBB-4E22-A973-3C0A6CF56153}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varFromEmail">
+      <DTS:VariableValue
+        DTS:DataType="8">qletlteam@gmail.com</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C6F9DFAC-23BE-4F27-B50A-C7398CB1934D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varLastModifiedDate">
+      <DTS:VariableValue
+        DTS:DataType="7">12:00:00 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6FED3064-F63E-402E-B18E-3E6B0F55679A}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Select Max(LastModifiedDate) as MaxLastModifiedDate from Stg_Makeda_Seare_QL&#xA;where SourceName = 'UberWriter'&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varMaxLastModifiedDate">
+      <DTS:VariableValue
+        DTS:DataType="8">Select Max(LastModifiedDate) as MaxLastModifiedDate from Stg_Makeda_Seare_QL
+where SourceName = 'UberWriter'</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{859ECB81-A13B-4E2B-8BAF-13EAA27434AC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varPassword">
+      <DTS:VariableValue
+        DTS:DataType="8">datapull123@1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CB677672-2F1F-48A1-AA35-D0B71EC8184C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSmtpClient">
+      <DTS:VariableValue
+        DTS:DataType="8">smtp.gmail.com</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7FFF5659-3665-4326-938F-1B82991FE4A8}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSmtpServerPort">
+      <DTS:VariableValue
+        DTS:DataType="8">587</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A91E5F61-D074-44A4-8331-E183E515A4E1}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="Replace(Reverse(substring(reverse(&quot;C:\\Users\\HP\\source\\repos\\QL_Makeda_Seare_SSIS_Package\\Pkg_Makeda_Seare_UberWriter.dtsx&quot;), 1, 15 )), &quot;.dtsx&quot;, &quot; &quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSourceName">
+      <DTS:VariableValue
+        DTS:DataType="8">UberWriter </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1BD4AD83-E8A3-4A60-8160-D8AB8A39C285}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSubject">
+      <DTS:VariableValue
+        DTS:DataType="8">UberWriter ETL ERROR</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{502888A7-C7F7-4F4E-A597-C54C7777BDAC}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="GETDATE()"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varTimeStamp">
+      <DTS:VariableValue
+        DTS:DataType="7">9/15/2020 8:51:34 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E587F1DA-94B7-47E2-8834-50330905CC7C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varToEmail">
+      <DTS:VariableValue
+        DTS:DataType="8">qletlteam@gmail.com</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task_UberWriter"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C977FFE3-CEAE-4F36-946A-667C05D02EAC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task_UberWriter"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task_UberWriter\ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."QL_Loans"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task_UberWriter\ADO NET Source.Connections[IDbConnection]"
+                  connectionManagerID="{F89E79C3-523D-4EE9-BE12-24E15B5983E8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Duna.database.windows.net.UberWriter.UberWriter]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanID]"
+                      length="72"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanID]"
+                      name="LoanID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LastLoadDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LastLoadDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LastLoadDate]"
+                      name="LastLoadDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LeadSource]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LeadSource]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LeadSource]"
+                      name="LeadSource"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LeadId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LeadId]"
+                      length="132"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LeadId]"
+                      name="LeadId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrFirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrFirstName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrFirstName]"
+                      name="BorrFirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrLastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrLastName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrLastName]"
+                      name="BorrLastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrBirthDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrBirthDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrBirthDate]"
+                      name="BorrBirthDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrGender]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrGender]"
+                      length="1"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrGender]"
+                      name="BorrGender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrEmailAddress]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrEmailAddress]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrEmailAddress]"
+                      name="BorrEmailAddress"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrAddress]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrAddress]"
+                      length="159"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrAddress]"
+                      name="BorrAddress"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrCity]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrCity]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrCity]"
+                      name="BorrCity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrState]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrState]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrState]"
+                      name="BorrState"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrZip]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrZip]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrZip]"
+                      name="BorrZip"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrNoYearsOnJob]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrNoYearsOnJob]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrNoYearsOnJob]"
+                      name="BorrNoYearsOnJob"
+                      precision="24"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[IsBorrSelfEmployeedFlag]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[IsBorrSelfEmployeedFlag]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[IsBorrSelfEmployeedFlag]"
+                      name="IsBorrSelfEmployeedFlag"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrTotalIncome]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrTotalIncome]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BorrTotalIncome]"
+                      name="BorrTotalIncome"
+                      precision="26"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanOfficer]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanOfficer]"
+                      length="101"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanOfficer]"
+                      name="LoanOfficer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanOfficerEmail]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanOfficerEmail]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanOfficerEmail]"
+                      name="LoanOfficerEmail"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[OfficeID]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[OfficeID]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[OfficeID]"
+                      name="OfficeID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[IntialLoanAmount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[IntialLoanAmount]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[IntialLoanAmount]"
+                      name="IntialLoanAmount"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[TotalLoanAmt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[TotalLoanAmt]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[TotalLoanAmt]"
+                      name="TotalLoanAmt"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[Net_Buy_Price]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Net_Buy_Price]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[Net_Buy_Price]"
+                      name="Net_Buy_Price"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[TopQualificationRatios]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[TopQualificationRatios]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[TopQualificationRatios]"
+                      name="TopQualificationRatios"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BottomQualificationRatios]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BottomQualificationRatios]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[BottomQualificationRatios]"
+                      name="BottomQualificationRatios"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanToValueRatio]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanToValueRatio]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanToValueRatio]"
+                      name="LoanToValueRatio"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[CombinedLoanToValueRatio]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CombinedLoanToValueRatio]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[CombinedLoanToValueRatio]"
+                      name="CombinedLoanToValueRatio"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[InterestRate]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[InterestRate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[InterestRate]"
+                      name="InterestRate"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[AppraisedValue]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AppraisedValue]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[AppraisedValue]"
+                      name="AppraisedValue"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[AnnualPercentageRate]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AnnualPercentageRate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[AnnualPercentageRate]"
+                      name="AnnualPercentageRate"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[HouseOnSaleStreet]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[HouseOnSaleStreet]"
+                      length="159"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[HouseOnSaleStreet]"
+                      name="HouseOnSaleStreet"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[HouseOnSaleState]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[HouseOnSaleState]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[HouseOnSaleState]"
+                      name="HouseOnSaleState"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[HouseOnSaleZip]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[HouseOnSaleZip]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[HouseOnSaleZip]"
+                      name="HouseOnSaleZip"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanProgram]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanProgram]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanProgram]"
+                      name="LoanProgram"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[AmortizationType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AmortizationType]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[AmortizationType]"
+                      name="AmortizationType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanTerm]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanTerm]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanTerm]"
+                      name="LoanTerm"
+                      precision="23"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[CreditPullDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CreditPullDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[CreditPullDate]"
+                      name="CreditPullDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[FinallCreditScore]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FinallCreditScore]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[FinallCreditScore]"
+                      name="FinallCreditScore"
+                      precision="24"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[UnderwriterRiskAssess]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[UnderwriterRiskAssess]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[UnderwriterRiskAssess]"
+                      name="UnderwriterRiskAssess"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanType]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanType]"
+                      name="LoanType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanPurpose]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanPurpose]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanPurpose]"
+                      name="LoanPurpose"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[MilestoneStatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[MilestoneStatus]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[MilestoneStatus]"
+                      name="MilestoneStatus"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[CurrentMilestone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CurrentMilestone]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[CurrentMilestone]"
+                      name="CurrentMilestone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanStatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanStatus]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanStatus]"
+                      name="LoanStatus"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LeadDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LeadDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LeadDate]"
+                      name="LeadDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ApplicationDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ApplicationDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ApplicationDate]"
+                      name="ApplicationDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LockDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LockDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LockDate]"
+                      name="LockDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LockExpireDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LockExpireDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LockExpireDate]"
+                      name="LockExpireDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LastModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LastModifiedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LastModifiedDate]"
+                      name="LastModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanStatusActionDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanStatusActionDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanStatusActionDate]"
+                      name="LoanStatusActionDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[FundedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FundedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[FundedDate]"
+                      name="FundedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanExpirationDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanExpirationDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanExpirationDate]"
+                      name="LoanExpirationDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanInformationDocumentDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanInformationDocumentDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanInformationDocumentDate]"
+                      name="LoanInformationDocumentDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[InitialDisclosureProvidedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[InitialDisclosureProvidedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[InitialDisclosureProvidedDate]"
+                      name="InitialDisclosureProvidedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[CurrentMilestoneTrackingDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CurrentMilestoneTrackingDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[CurrentMilestoneTrackingDate]"
+                      name="CurrentMilestoneTrackingDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ApplicationReturnedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ApplicationReturnedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ApplicationReturnedDate]"
+                      name="ApplicationReturnedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ApprovalDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ApprovalDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ApprovalDate]"
+                      name="ApprovalDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ConditionalApprovalDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ConditionalApprovalDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ConditionalApprovalDate]"
+                      name="ConditionalApprovalDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ConditionsReceivedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ConditionsReceivedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ConditionsReceivedDate]"
+                      name="ConditionsReceivedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentPreparedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentPreparedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentPreparedDate]"
+                      name="DocumentPreparedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentSigningDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentSigningDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentSigningDate]"
+                      name="DocumentSigningDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[FinalDocumentDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FinalDocumentDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[FinalDocumentDate]"
+                      name="FinalDocumentDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanSetupDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanSetupDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[LoanSetupDate]"
+                      name="LoanSetupDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[EstimatedLoanClosingDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[EstimatedLoanClosingDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[EstimatedLoanClosingDate]"
+                      name="EstimatedLoanClosingDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ActualClosingDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ActualClosingDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ActualClosingDate]"
+                      name="ActualClosingDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ProcessingDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ProcessingDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ProcessingDate]"
+                      name="ProcessingDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentResubmittedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentResubmittedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentResubmittedDate]"
+                      name="DocumentResubmittedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentReviewedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentReviewedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentReviewedDate]"
+                      name="DocumentReviewedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentShippingDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentShippingDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentShippingDate]"
+                      name="DocumentShippingDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ApplicationStartedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ApplicationStartedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ApplicationStartedDate]"
+                      name="ApplicationStartedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentSubmittalDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentSubmittalDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DocumentSubmittalDate]"
+                      name="DocumentSubmittalDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[UnderwritingReceivedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[UnderwritingReceivedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[UnderwritingReceivedDate]"
+                      name="UnderwritingReceivedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[InitialClosingDisclosureSentDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[InitialClosingDisclosureSentDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[InitialClosingDisclosureSentDate]"
+                      name="InitialClosingDisclosureSentDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[InitialLoanEstimateSentDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[InitialLoanEstimateSentDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[InitialLoanEstimateSentDate]"
+                      name="InitialLoanEstimateSentDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[InitialLoanEstimateDueDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[InitialLoanEstimateDueDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[InitialLoanEstimateDueDate]"
+                      name="InitialLoanEstimateDueDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ClosingDisclosureRecievedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ClosingDisclosureRecievedDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ClosingDisclosureRecievedDate]"
+                      name="ClosingDisclosureRecievedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DisbursementDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DisbursementDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DisbursementDate]"
+                      name="DisbursementDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DenialDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DenialDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[DenialDate]"
+                      name="DenialDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[QAFailDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[QAFailDate]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[QAFailDate]"
+                      name="QAFailDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[IsConstructionLoan]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[IsConstructionLoan]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[IsConstructionLoan]"
+                      name="IsConstructionLoan"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ApprovalStatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ApprovalStatus]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[ApprovalStatus]"
+                      name="ApprovalStatus"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[PropertyOccupancyType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PropertyOccupancyType]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[PropertyOccupancyType]"
+                      name="PropertyOccupancyType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[Closer_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Closer_Name]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[Closer_Name]"
+                      name="Closer_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[Loan_Processor_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Loan_Processor_Name]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[Loan_Processor_Name]"
+                      name="Loan_Processor_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[Underwriter_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Underwriter_Name]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[Underwriter_Name]"
+                      name="Underwriter_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[MarketSource]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[MarketSource]"
+                      length="7"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[MarketSource]"
+                      name="MarketSource"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[QAStatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[QAStatus]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[QAStatus]"
+                      name="QAStatus"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[MortgageInsuranceCompany]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[MortgageInsuranceCompany]"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[MortgageInsuranceCompany]"
+                      name="MortgageInsuranceCompany"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[TotalFees]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[TotalFees]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[TotalFees]"
+                      name="TotalFees"
+                      precision="27"
+                      scale="13"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[OriginationFee]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[OriginationFee]"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].Columns[OriginationFee]"
+                      name="OriginationFee"
+                      precision="27"
+                      scale="13"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanID]"
+                      dataType="wstr"
+                      length="72"
+                      name="LoanID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LastLoadDate]"
+                      dataType="dbTimeStamp"
+                      name="LastLoadDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LeadSource]"
+                      dataType="nText"
+                      name="LeadSource" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LeadId]"
+                      dataType="wstr"
+                      length="132"
+                      name="LeadId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrFirstName]"
+                      dataType="wstr"
+                      length="50"
+                      name="BorrFirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrLastName]"
+                      dataType="wstr"
+                      length="50"
+                      name="BorrLastName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrBirthDate]"
+                      dataType="dbDate"
+                      name="BorrBirthDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrGender]"
+                      dataType="wstr"
+                      length="1"
+                      name="BorrGender" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrEmailAddress]"
+                      dataType="wstr"
+                      length="4000"
+                      name="BorrEmailAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrAddress]"
+                      dataType="wstr"
+                      length="159"
+                      name="BorrAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrCity]"
+                      dataType="wstr"
+                      length="128"
+                      name="BorrCity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrState]"
+                      dataType="wstr"
+                      length="128"
+                      name="BorrState" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrZip]"
+                      dataType="wstr"
+                      length="128"
+                      name="BorrZip" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrNoYearsOnJob]"
+                      dataType="numeric"
+                      name="BorrNoYearsOnJob"
+                      precision="24"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[IsBorrSelfEmployeedFlag]"
+                      dataType="wstr"
+                      length="128"
+                      name="IsBorrSelfEmployeedFlag" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BorrTotalIncome]"
+                      dataType="numeric"
+                      name="BorrTotalIncome"
+                      precision="26"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanOfficer]"
+                      dataType="wstr"
+                      length="101"
+                      name="LoanOfficer" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanOfficerEmail]"
+                      dataType="wstr"
+                      length="4000"
+                      name="LoanOfficerEmail" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[OfficeID]"
+                      dataType="nText"
+                      name="OfficeID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[IntialLoanAmount]"
+                      dataType="numeric"
+                      name="IntialLoanAmount"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[TotalLoanAmt]"
+                      dataType="numeric"
+                      name="TotalLoanAmt"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Net_Buy_Price]"
+                      dataType="numeric"
+                      name="Net_Buy_Price"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[TopQualificationRatios]"
+                      dataType="numeric"
+                      name="TopQualificationRatios"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[BottomQualificationRatios]"
+                      dataType="numeric"
+                      name="BottomQualificationRatios"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanToValueRatio]"
+                      dataType="numeric"
+                      name="LoanToValueRatio"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CombinedLoanToValueRatio]"
+                      dataType="numeric"
+                      name="CombinedLoanToValueRatio"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[InterestRate]"
+                      dataType="numeric"
+                      name="InterestRate"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AppraisedValue]"
+                      dataType="numeric"
+                      name="AppraisedValue"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AnnualPercentageRate]"
+                      dataType="numeric"
+                      name="AnnualPercentageRate"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[HouseOnSaleStreet]"
+                      dataType="wstr"
+                      length="159"
+                      name="HouseOnSaleStreet" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[HouseOnSaleState]"
+                      dataType="wstr"
+                      length="128"
+                      name="HouseOnSaleState" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[HouseOnSaleZip]"
+                      dataType="wstr"
+                      length="128"
+                      name="HouseOnSaleZip" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanProgram]"
+                      dataType="wstr"
+                      length="128"
+                      name="LoanProgram" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AmortizationType]"
+                      dataType="wstr"
+                      length="128"
+                      name="AmortizationType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanTerm]"
+                      dataType="numeric"
+                      name="LoanTerm"
+                      precision="23"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CreditPullDate]"
+                      dataType="dbTimeStamp"
+                      name="CreditPullDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FinallCreditScore]"
+                      dataType="numeric"
+                      name="FinallCreditScore"
+                      precision="24"
+                      scale="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[UnderwriterRiskAssess]"
+                      dataType="wstr"
+                      length="128"
+                      name="UnderwriterRiskAssess" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanType]"
+                      dataType="wstr"
+                      length="128"
+                      name="LoanType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanPurpose]"
+                      dataType="wstr"
+                      length="128"
+                      name="LoanPurpose" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[MilestoneStatus]"
+                      dataType="wstr"
+                      length="128"
+                      name="MilestoneStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CurrentMilestone]"
+                      dataType="wstr"
+                      length="128"
+                      name="CurrentMilestone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanStatus]"
+                      dataType="wstr"
+                      length="128"
+                      name="LoanStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LeadDate]"
+                      dataType="dbTimeStamp"
+                      name="LeadDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ApplicationDate]"
+                      dataType="dbTimeStamp"
+                      name="ApplicationDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LockDate]"
+                      dataType="dbTimeStamp"
+                      name="LockDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LockExpireDate]"
+                      dataType="dbTimeStamp"
+                      name="LockExpireDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LastModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanStatusActionDate]"
+                      dataType="dbTimeStamp"
+                      name="LoanStatusActionDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FundedDate]"
+                      dataType="dbTimeStamp"
+                      name="FundedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanExpirationDate]"
+                      dataType="dbTimeStamp"
+                      name="LoanExpirationDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanInformationDocumentDate]"
+                      dataType="dbTimeStamp"
+                      name="LoanInformationDocumentDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[InitialDisclosureProvidedDate]"
+                      dataType="dbTimeStamp"
+                      name="InitialDisclosureProvidedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CurrentMilestoneTrackingDate]"
+                      dataType="dbTimeStamp"
+                      name="CurrentMilestoneTrackingDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ApplicationReturnedDate]"
+                      dataType="dbTimeStamp"
+                      name="ApplicationReturnedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ApprovalDate]"
+                      dataType="dbTimeStamp"
+                      name="ApprovalDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ConditionalApprovalDate]"
+                      dataType="dbTimeStamp"
+                      name="ConditionalApprovalDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ConditionsReceivedDate]"
+                      dataType="dbTimeStamp"
+                      name="ConditionsReceivedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentPreparedDate]"
+                      dataType="dbTimeStamp"
+                      name="DocumentPreparedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentSigningDate]"
+                      dataType="dbTimeStamp"
+                      name="DocumentSigningDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[FinalDocumentDate]"
+                      dataType="dbTimeStamp"
+                      name="FinalDocumentDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[LoanSetupDate]"
+                      dataType="dbTimeStamp"
+                      name="LoanSetupDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[EstimatedLoanClosingDate]"
+                      dataType="dbTimeStamp"
+                      name="EstimatedLoanClosingDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ActualClosingDate]"
+                      dataType="dbTimeStamp"
+                      name="ActualClosingDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ProcessingDate]"
+                      dataType="dbTimeStamp"
+                      name="ProcessingDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentResubmittedDate]"
+                      dataType="dbTimeStamp"
+                      name="DocumentResubmittedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentReviewedDate]"
+                      dataType="dbTimeStamp"
+                      name="DocumentReviewedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentShippingDate]"
+                      dataType="dbTimeStamp"
+                      name="DocumentShippingDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ApplicationStartedDate]"
+                      dataType="dbTimeStamp"
+                      name="ApplicationStartedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DocumentSubmittalDate]"
+                      dataType="dbTimeStamp"
+                      name="DocumentSubmittalDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[UnderwritingReceivedDate]"
+                      dataType="dbTimeStamp"
+                      name="UnderwritingReceivedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[InitialClosingDisclosureSentDate]"
+                      dataType="dbTimeStamp"
+                      name="InitialClosingDisclosureSentDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[InitialLoanEstimateSentDate]"
+                      dataType="dbTimeStamp"
+                      name="InitialLoanEstimateSentDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[InitialLoanEstimateDueDate]"
+                      dataType="dbTimeStamp"
+                      name="InitialLoanEstimateDueDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ClosingDisclosureRecievedDate]"
+                      dataType="dbTimeStamp"
+                      name="ClosingDisclosureRecievedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DisbursementDate]"
+                      dataType="dbTimeStamp"
+                      name="DisbursementDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DenialDate]"
+                      dataType="dbTimeStamp"
+                      name="DenialDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[QAFailDate]"
+                      dataType="dbTimeStamp"
+                      name="QAFailDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[IsConstructionLoan]"
+                      dataType="wstr"
+                      length="128"
+                      name="IsConstructionLoan" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ApprovalStatus]"
+                      dataType="wstr"
+                      length="128"
+                      name="ApprovalStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PropertyOccupancyType]"
+                      dataType="wstr"
+                      length="128"
+                      name="PropertyOccupancyType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Closer_Name]"
+                      dataType="wstr"
+                      length="128"
+                      name="Closer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Loan_Processor_Name]"
+                      dataType="wstr"
+                      length="128"
+                      name="Loan_Processor_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Underwriter_Name]"
+                      dataType="wstr"
+                      length="128"
+                      name="Underwriter_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[MarketSource]"
+                      dataType="wstr"
+                      length="7"
+                      name="MarketSource" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[QAStatus]"
+                      dataType="wstr"
+                      length="128"
+                      name="QAStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[MortgageInsuranceCompany]"
+                      dataType="wstr"
+                      length="128"
+                      name="MortgageInsuranceCompany" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[TotalFees]"
+                      dataType="numeric"
+                      name="TotalFees"
+                      precision="27"
+                      scale="13" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[OriginationFee]"
+                      dataType="numeric"
+                      name="OriginationFee"
+                      precision="27"
+                      scale="13" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanID]"
+                      dataType="wstr"
+                      length="72"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanID]"
+                      name="LoanID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LastLoadDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LastLoadDate]"
+                      name="LastLoadDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LeadSource]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LeadSource]"
+                      name="LeadSource" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LeadId]"
+                      dataType="wstr"
+                      length="132"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LeadId]"
+                      name="LeadId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrFirstName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrFirstName]"
+                      name="BorrFirstName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrLastName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrLastName]"
+                      name="BorrLastName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrBirthDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrBirthDate]"
+                      name="BorrBirthDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrGender]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrGender]"
+                      name="BorrGender" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrEmailAddress]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrEmailAddress]"
+                      name="BorrEmailAddress" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrAddress]"
+                      dataType="wstr"
+                      length="159"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrAddress]"
+                      name="BorrAddress" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrCity]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrCity]"
+                      name="BorrCity" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrState]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrState]"
+                      name="BorrState" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrZip]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrZip]"
+                      name="BorrZip" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrNoYearsOnJob]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrNoYearsOnJob]"
+                      name="BorrNoYearsOnJob"
+                      precision="24"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[IsBorrSelfEmployeedFlag]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[IsBorrSelfEmployeedFlag]"
+                      name="IsBorrSelfEmployeedFlag" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrTotalIncome]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BorrTotalIncome]"
+                      name="BorrTotalIncome"
+                      precision="26"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanOfficer]"
+                      dataType="wstr"
+                      length="101"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanOfficer]"
+                      name="LoanOfficer" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanOfficerEmail]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanOfficerEmail]"
+                      name="LoanOfficerEmail" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[OfficeID]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[OfficeID]"
+                      name="OfficeID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[IntialLoanAmount]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[IntialLoanAmount]"
+                      name="IntialLoanAmount"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[TotalLoanAmt]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[TotalLoanAmt]"
+                      name="TotalLoanAmt"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Net_Buy_Price]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Net_Buy_Price]"
+                      name="Net_Buy_Price"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[TopQualificationRatios]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[TopQualificationRatios]"
+                      name="TopQualificationRatios"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BottomQualificationRatios]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[BottomQualificationRatios]"
+                      name="BottomQualificationRatios"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanToValueRatio]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanToValueRatio]"
+                      name="LoanToValueRatio"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CombinedLoanToValueRatio]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CombinedLoanToValueRatio]"
+                      name="CombinedLoanToValueRatio"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[InterestRate]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[InterestRate]"
+                      name="InterestRate"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AppraisedValue]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AppraisedValue]"
+                      name="AppraisedValue"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AnnualPercentageRate]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AnnualPercentageRate]"
+                      name="AnnualPercentageRate"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[HouseOnSaleStreet]"
+                      dataType="wstr"
+                      length="159"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[HouseOnSaleStreet]"
+                      name="HouseOnSaleStreet" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[HouseOnSaleState]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[HouseOnSaleState]"
+                      name="HouseOnSaleState" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[HouseOnSaleZip]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[HouseOnSaleZip]"
+                      name="HouseOnSaleZip" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanProgram]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanProgram]"
+                      name="LoanProgram" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AmortizationType]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AmortizationType]"
+                      name="AmortizationType" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanTerm]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanTerm]"
+                      name="LoanTerm"
+                      precision="23"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CreditPullDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CreditPullDate]"
+                      name="CreditPullDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FinallCreditScore]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FinallCreditScore]"
+                      name="FinallCreditScore"
+                      precision="24"
+                      scale="10" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[UnderwriterRiskAssess]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[UnderwriterRiskAssess]"
+                      name="UnderwriterRiskAssess" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanType]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanType]"
+                      name="LoanType" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanPurpose]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanPurpose]"
+                      name="LoanPurpose" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[MilestoneStatus]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[MilestoneStatus]"
+                      name="MilestoneStatus" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CurrentMilestone]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CurrentMilestone]"
+                      name="CurrentMilestone" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanStatus]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanStatus]"
+                      name="LoanStatus" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LeadDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LeadDate]"
+                      name="LeadDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ApplicationDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ApplicationDate]"
+                      name="ApplicationDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LockDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LockDate]"
+                      name="LockDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LockExpireDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LockExpireDate]"
+                      name="LockExpireDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LastModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LastModifiedDate]"
+                      name="LastModifiedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanStatusActionDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanStatusActionDate]"
+                      name="LoanStatusActionDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FundedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FundedDate]"
+                      name="FundedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanExpirationDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanExpirationDate]"
+                      name="LoanExpirationDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanInformationDocumentDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanInformationDocumentDate]"
+                      name="LoanInformationDocumentDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[InitialDisclosureProvidedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[InitialDisclosureProvidedDate]"
+                      name="InitialDisclosureProvidedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CurrentMilestoneTrackingDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CurrentMilestoneTrackingDate]"
+                      name="CurrentMilestoneTrackingDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ApplicationReturnedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ApplicationReturnedDate]"
+                      name="ApplicationReturnedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ApprovalDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ApprovalDate]"
+                      name="ApprovalDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ConditionalApprovalDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ConditionalApprovalDate]"
+                      name="ConditionalApprovalDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ConditionsReceivedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ConditionsReceivedDate]"
+                      name="ConditionsReceivedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentPreparedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentPreparedDate]"
+                      name="DocumentPreparedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentSigningDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentSigningDate]"
+                      name="DocumentSigningDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FinalDocumentDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[FinalDocumentDate]"
+                      name="FinalDocumentDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanSetupDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[LoanSetupDate]"
+                      name="LoanSetupDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[EstimatedLoanClosingDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[EstimatedLoanClosingDate]"
+                      name="EstimatedLoanClosingDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ActualClosingDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ActualClosingDate]"
+                      name="ActualClosingDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ProcessingDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ProcessingDate]"
+                      name="ProcessingDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentResubmittedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentResubmittedDate]"
+                      name="DocumentResubmittedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentReviewedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentReviewedDate]"
+                      name="DocumentReviewedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentShippingDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentShippingDate]"
+                      name="DocumentShippingDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ApplicationStartedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ApplicationStartedDate]"
+                      name="ApplicationStartedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentSubmittalDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DocumentSubmittalDate]"
+                      name="DocumentSubmittalDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[UnderwritingReceivedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[UnderwritingReceivedDate]"
+                      name="UnderwritingReceivedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[InitialClosingDisclosureSentDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[InitialClosingDisclosureSentDate]"
+                      name="InitialClosingDisclosureSentDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[InitialLoanEstimateSentDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[InitialLoanEstimateSentDate]"
+                      name="InitialLoanEstimateSentDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[InitialLoanEstimateDueDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[InitialLoanEstimateDueDate]"
+                      name="InitialLoanEstimateDueDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ClosingDisclosureRecievedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ClosingDisclosureRecievedDate]"
+                      name="ClosingDisclosureRecievedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DisbursementDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DisbursementDate]"
+                      name="DisbursementDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DenialDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DenialDate]"
+                      name="DenialDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[QAFailDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[QAFailDate]"
+                      name="QAFailDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[IsConstructionLoan]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[IsConstructionLoan]"
+                      name="IsConstructionLoan" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ApprovalStatus]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ApprovalStatus]"
+                      name="ApprovalStatus" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PropertyOccupancyType]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PropertyOccupancyType]"
+                      name="PropertyOccupancyType" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Closer_Name]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Closer_Name]"
+                      name="Closer_Name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Loan_Processor_Name]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Loan_Processor_Name]"
+                      name="Loan_Processor_Name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Underwriter_Name]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Underwriter_Name]"
+                      name="Underwriter_Name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[MarketSource]"
+                      dataType="wstr"
+                      length="7"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[MarketSource]"
+                      name="MarketSource" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[QAStatus]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[QAStatus]"
+                      name="QAStatus" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[MortgageInsuranceCompany]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[MortgageInsuranceCompany]"
+                      name="MortgageInsuranceCompany" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[TotalFees]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[TotalFees]"
+                      name="TotalFees"
+                      precision="27"
+                      scale="13" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[OriginationFee]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[OriginationFee]"
+                      name="OriginationFee"
+                      precision="27"
+                      scale="13" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_UberWriter\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST_DeleteSTG_UberWriter"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{88771B37-BD48-4A8B-A750-B8DD3106DDA6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST_DeleteSTG_UberWriter"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FB234875-9477-418D-9B0B-EEEDF5CD2741}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::varDeleteSTG" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EST_LastModifiedDate"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B1CA7959-D275-4B87-BFF0-721A8625151F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EST_LastModifiedDate"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\Data Flow Task_UberWriter"
+          TopLeft="128.571430760987,139.94117843321" />
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\EST_DeleteSTG_UberWriter"
+          TopLeft="136.428573751936,48.1764712638921" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\EST_LastModifiedDate"
+          TopLeft="272.142861777422,265.352944897945" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task_UberWriter">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\Data Flow Task_UberWriter\ADO NET Source"
+          TopLeft="39.285714954746,47.4117653708145" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_UberWriter\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
