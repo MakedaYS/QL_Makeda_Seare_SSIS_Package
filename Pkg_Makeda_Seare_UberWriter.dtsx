@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{D77904C4-449E-4B8C-B8C0-63FC93DFA351}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{82480724-C5E9-430F-8F4E-E1DC9B3C666B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -94,7 +94,7 @@ where SourceName = 'UberWriter'</DTS:VariableValue>
       DTS:Namespace="User"
       DTS:ObjectName="varRunTime">
       <DTS:VariableValue
-        DTS:DataType="7">9/17/2020 9:34:38 PM</DTS:VariableValue>
+        DTS:DataType="7">9/21/2020 2:17:53 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -143,7 +143,7 @@ where SourceName = 'UberWriter'</DTS:VariableValue>
       DTS:Namespace="User"
       DTS:ObjectName="varTimeStamp">
       <DTS:VariableValue
-        DTS:DataType="7">9/17/2020 9:34:38 PM</DTS:VariableValue>
+        DTS:DataType="7">9/21/2020 2:17:53 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -14848,6 +14848,10 @@ where [refTable].[MarketSourceCode] = ?</property>
           Size="183.2,41.6"
           Id="Package\EST_LastModifiedDate"
           TopLeft="167.142859989283,250.058827036392" />
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\Execute SQL Task_ETL_Log"
+          TopLeft="265.000004512923,341.823534205711" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="240.828573751936,89.7764712638921">
@@ -14916,10 +14920,6 @@ where [refTable].[MarketSourceCode] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="208.8,41.6"
-          Id="Package\Execute SQL Task_ETL_Log"
-          TopLeft="265.000004512923,341.823534205711" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="258.742859989283,291.658827036392">
@@ -14957,95 +14957,85 @@ where [refTable].[MarketSourceCode] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task_ErrorLog"
+          TopLeft="253,98" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Data Flow Task_UberWriter">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157.6,41.6"
-          Id="Package\Data Flow Task_UberWriter\ADO NET Source"
-          TopLeft="39.285714954746,29.8235298300285" />
+          Size="239.2,41.6"
+          Id="Package\Data Flow Task_UberWriter\Lookup_MarketSource_UberWriter"
+          TopLeft="322.857148355367,136.8823548609" />
         <NodeLayout
           Size="210.4,41.6"
           Id="Package\Data Flow Task_UberWriter\Derived Column_UberWriter"
           TopLeft="349.285720234015,16.0588237546307" />
-        <EdgeLayout
-          Id="Package\Data Flow Task_UberWriter.Paths[ADO NET Source Output]"
-          TopLeft="196.885714954746,50.6235298300285">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="152.400005279269,-13.7647060753978"
-              Start="0,0"
-              End="144.900005279269,-13.7647060753978">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="72.2000026396344,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="72.2000026396344,0"
-                    Point2="76.2000026396344,0"
-                    Point3="76.2000026396344,-4" />
-                  <mssgle:LineSegment
-                    End="76.2000026396344,-9.76470607539776" />
-                  <mssgle:CubicBezierSegment
-                    Point1="76.2000026396344,-9.76470607539776"
-                    Point2="76.2000026396344,-13.7647060753978"
-                    Point3="80.2000026396344,-13.7647060753978" />
-                  <mssgle:LineSegment
-                    End="144.900005279269,-13.7647060753978" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="239.2,41.6"
-          Id="Package\Data Flow Task_UberWriter\Lookup_MarketSource_UberWriter"
-          TopLeft="322.857148355367,136.8823548609" />
-        <EdgeLayout
-          Id="Package\Data Flow Task_UberWriter.Paths[Derived Column Output]"
-          TopLeft="454.485720234015,57.6588237546307">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-12.0285718786474,79.223531106269"
-              Start="0,0"
-              End="-12.0285718786474,71.723531106269">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.6117655531345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.6117655531345"
-                    Point2="0,39.6117655531345"
-                    Point3="-4,39.6117655531345" />
-                  <mssgle:LineSegment
-                    End="-8.02857187864743,39.6117655531345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-8.02857187864743,39.6117655531345"
-                    Point2="-12.0285718786474,39.6117655531345"
-                    Point3="-12.0285718786474,43.6117655531345" />
-                  <mssgle:LineSegment
-                    End="-12.0285718786474,71.723531106269" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="228,41.6"
+          Id="Package\Data Flow Task_UberWriter\Derived Column_Ubr_Insurance"
+          TopLeft="48.571429398595,260.000003646402" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Data Flow Task_UberWriter\Row Count"
+          TopLeft="207.142860670479,360.941181532652" />
+        <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\Data Flow Task_UberWriter\OLE DB Destination_UberWriter"
+          TopLeft="440.000007493155,339.529416526478" />
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\Data Flow Task_UberWriter\ADO NET Source"
+          TopLeft="39.285714954746,29.8235298300285" />
         <NodeLayout
           Size="199.2,41.6"
           Id="Package\Data Flow Task_UberWriter\Fuzzy Lookup_UberWriter"
           TopLeft="17.1428574347983,144.529413791676" />
+        <EdgeLayout
+          Id="Package\Data Flow Task_UberWriter.Paths[Row Count Output 1]"
+          TopLeft="336.742860670479,381.741181532652">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103.257146822676,-21.4117650061742"
+              Start="0,0"
+              End="95.7571468226763,-21.4117650061742">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="47.6285734113382,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.6285734113382,0"
+                    Point2="51.6285734113382,0"
+                    Point3="51.6285734113382,-4" />
+                  <mssgle:LineSegment
+                    End="51.6285734113382,-17.4117650061742" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.6285734113382,-17.4117650061742"
+                    Point2="51.6285734113382,-21.4117650061742"
+                    Point3="55.6285734113382,-21.4117650061742" />
+                  <mssgle:LineSegment
+                    End="95.7571468226763,-21.4117650061742" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_UberWriter.Paths[Lookup Match Output]"
           TopLeft="322.857148355367,161.505884326288">
@@ -15070,10 +15060,6 @@ where [refTable].[MarketSourceCode] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="228,41.6"
-          Id="Package\Data Flow Task_UberWriter\Derived Column_Ubr_Insurance"
-          TopLeft="48.571429398595,260.000003646402" />
         <EdgeLayout
           Id="Package\Data Flow Task_UberWriter.Paths[Fuzzy Lookup Output]"
           TopLeft="116.742857434798,186.129413791676">
@@ -15108,14 +15094,6 @@ where [refTable].[MarketSourceCode] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="227.2,41.6"
-          Id="Package\Data Flow Task_UberWriter\OLE DB Destination_UberWriter"
-          TopLeft="440.000007493155,339.529416526478" />
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Data Flow Task_UberWriter\Row Count"
-          TopLeft="207.142860670479,360.941181532652" />
         <EdgeLayout
           Id="Package\Data Flow Task_UberWriter.Paths[Derived Column Output1]"
           TopLeft="162.571429398595,301.600003646402">
@@ -15151,31 +15129,65 @@ where [refTable].[MarketSourceCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task_UberWriter.Paths[Row Count Output 1]"
-          TopLeft="336.742860670479,381.741181532652">
+          Id="Package\Data Flow Task_UberWriter.Paths[Derived Column Output]"
+          TopLeft="454.485720234015,57.6588237546307">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="103.257146822676,-21.4117650061742"
+              EndConnector="-12.0285718786474,79.223531106269"
               Start="0,0"
-              End="95.7571468226763,-21.4117650061742">
+              End="-12.0285718786474,71.723531106269">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="47.6285734113382,0" />
+                    End="0,35.6117655531345" />
                   <mssgle:CubicBezierSegment
-                    Point1="47.6285734113382,0"
-                    Point2="51.6285734113382,0"
-                    Point3="51.6285734113382,-4" />
+                    Point1="0,35.6117655531345"
+                    Point2="0,39.6117655531345"
+                    Point3="-4,39.6117655531345" />
                   <mssgle:LineSegment
-                    End="51.6285734113382,-17.4117650061742" />
+                    End="-8.02857187864743,39.6117655531345" />
                   <mssgle:CubicBezierSegment
-                    Point1="51.6285734113382,-17.4117650061742"
-                    Point2="51.6285734113382,-21.4117650061742"
-                    Point3="55.6285734113382,-21.4117650061742" />
+                    Point1="-8.02857187864743,39.6117655531345"
+                    Point2="-12.0285718786474,39.6117655531345"
+                    Point3="-12.0285718786474,43.6117655531345" />
                   <mssgle:LineSegment
-                    End="95.7571468226763,-21.4117650061742" />
+                    End="-12.0285718786474,71.723531106269" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_UberWriter.Paths[ADO NET Source Output]"
+          TopLeft="196.885714954746,50.6235298300285">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.400005279269,-13.7647060753978"
+              Start="0,0"
+              End="144.900005279269,-13.7647060753978">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="72.2000026396344,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="72.2000026396344,0"
+                    Point2="76.2000026396344,0"
+                    Point3="76.2000026396344,-4" />
+                  <mssgle:LineSegment
+                    End="76.2000026396344,-9.76470607539776" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76.2000026396344,-9.76470607539776"
+                    Point2="76.2000026396344,-13.7647060753978"
+                    Point3="80.2000026396344,-13.7647060753978" />
+                  <mssgle:LineSegment
+                    End="144.900005279269,-13.7647060753978" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15188,20 +15200,12 @@ where [refTable].[MarketSourceCode] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_UberWriter\ADO NET Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task_UberWriter\Lookup_MarketSource_UberWriter">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -15211,8 +15215,29 @@ where [refTable].[MarketSourceCode] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_UberWriter\OLE DB Destination_UberWriter">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_UberWriter\ADO NET Source">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -15231,30 +15256,5 @@ where [refTable].[MarketSourceCode] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_UberWriter\OLE DB Destination_UberWriter">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="208.8,41.6"
-          Id="Package.EventHandlers[OnError]\Execute SQL Task_ErrorLog"
-          TopLeft="253,98" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

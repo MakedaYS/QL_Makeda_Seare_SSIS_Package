@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LendingPad"
+  DTS:DTSID="{A52BBF09-3D82-44C2-B2FD-36FB367A23D3}"
+  DTS:CreationName="FILE">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::LendingPad_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:FileUsageType="2"
+      DTS:ConnectionString="C:\LendingPad" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
